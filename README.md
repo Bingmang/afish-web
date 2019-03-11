@@ -17,9 +17,22 @@ How to commit:
 **禁止直接push到master分支！先提交到自己的分支，发起pull request，代码review通过后可合并**
 
 ```bash
+# 1. 切换到自己的分支
 git checkout -b your_name
+# 2. 确认修改状态
 git status
 git add .
+# ====== 若代码是最新的则跳过以下步骤 ======
+# 2.5. 暂存修改状态, 并拉取最新代码（若本地代码已经是最新的则跳过这一步）
+git stash
+git pull origin master
+# 2.5. 重放修改状态
+git stash apply
+# 2.5. 重新确认修改状态
+git status
+git add .
+# ========================================
+# 3. 提交代码并push到远程的自己的分支
 git commit -m "[add/update/bugfix/delete/other] 新增过滤功能"
 git push origin your_name
 ```
