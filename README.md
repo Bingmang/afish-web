@@ -1,6 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# afish-web
 
-## Available Scripts
+## Development
+
+前端使用React技术栈。
+
+How to run:
+```bash
+git clone https://github.com/afish1001/afish-web.git
+cd afish-web/
+yarn
+yarn start
+```
+
+How to commit:
+
+**禁止直接push到master分支！先提交到自己的分支，发起pull request，代码review通过后可合并**
+
+```bash
+git checkout -b your_name
+git status
+git add .
+git commit -m "[add/update/bugfix/delete/other] 新增过滤功能"
+git push origin your_name
+```
+
+## React
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
