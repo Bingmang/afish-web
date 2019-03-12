@@ -7,7 +7,7 @@ import Container from './Container'
 import Footer from './Footer'
 
 const App = () => (
-  <div class="mainWrapper">
+  <div className="mainWrapper">
     <Header />
     <Banner />
     <Container />

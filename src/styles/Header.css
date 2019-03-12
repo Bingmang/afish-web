@@ -25,7 +25,7 @@
   white-space: nowrap;
 }
 
-.ant-menu {
+.navbar .ant-menu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -35,10 +35,41 @@
   border: none;
 }
 
-.ant-menu-item {
+.navbar .ant-menu-item {
   position: relative;
   display: inline-block;
   margin: 0 30px;
   padding: 0;
   list-style: none;
+}
+
+.lang {
+  position: relative;
+  z-index: 1;
+  float: right;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+}
+
+.lang .ant-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+}
+
+.lang .ant-menu-item {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0;
+  list-style: none;
+}
+
+.lang span {
+  color: #fff;
 }

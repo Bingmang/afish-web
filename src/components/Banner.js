@@ -3,10 +3,10 @@ import '../styles/Banner.css'
 import video from '../sources/banner_video.mp4'
 
 const Banner = () => (
-    <div class="banner">
+    <div className="banner">
       <video loop="loop" muted="muted" autoPlay="autoplay" src={video}></video>
-      <span class="videoBg"></span>
-      <span class="title">aFish.ai Lab</span>
+      <span className="videoBg"></span>
+      <span className="title">aFish.ai Lab</span>
     </div>
 )
 
