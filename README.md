@@ -2,17 +2,18 @@
 
 ## Development
 
-前端使用React技术栈。
+前端使用React+Antd技术栈。
 
-How to run:
+#### How to run:
 ```bash
 git clone https://github.com/afish1001/afish-web.git
 cd afish-web/
 yarn
 yarn start
 ```
+推荐使用vscode，对前端开发极其友好，处理git冲突也很方便。
 
-How to commit:
+#### How to commit:
 
 **禁止直接push到master分支！先提交到自己的分支，发起pull request，代码review通过后可合并**
 
