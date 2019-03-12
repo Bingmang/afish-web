@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../sources/logo.svg';
 import '../styles/App.css';
 
 import Header from './Header'
@@ -8,12 +7,12 @@ import Container from './Container'
 import Footer from './Footer'
 
 const App = () => (
-  <div>
+  <div class="mainWrapper">
     <Header />
     <Banner />
-    {/* <Container />
-    <Footer /> */}
+    <Container />
+    <Footer />
   </div>
 )
 
-export default App;
+export default App

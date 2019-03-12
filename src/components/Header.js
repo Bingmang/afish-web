@@ -1,40 +1,41 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Menu } from 'antd'
 
 import '../styles/Header.css'
+import logo from '../sources/logo.png'
 
 class Header extends Component {
-  constructor(props) {
-    super(props)
+  state = {
+    current: null
+  }
+
+  handleClick = (e) => {
+    console.log('click ', e)
+    this.setState({
+      current: e.key
+    })
   }
 
   render() {
     return (
-      <header>
+      <header class="header">
         <div class="inner">
-          <div class="lang">
-            <a href="#">中</a>
-            <span>|</span>
-            <a href="#">En</a>
-          </div>
+          <a href="/"><img src={logo} alt="logo"></img></a>
           <div class="navbar">
-            <ul style={{height: '100%'}}>
-              <li>
-                <span>论文</span>
-              </li>
-              <li>
-                <span>新闻</span>
-              </li>
-              <li>
-                <span>成果</span>
-              </li>
-              <li>
-                <span>合作</span>
-              </li>
-              <li>
-                <span>关于</span>
-              </li>
-            </ul>
+            <Menu
+              onClick={this.handleClick}
+              selectedKeys={[this.state.current]}
+              mode="horizontal"
+            >
+              <Menu.Item key="paper">论文</Menu.Item>
+              <Menu.Item key="news">新闻</Menu.Item>
+              <Menu.Item key="achieve">成果</Menu.Item>
+              <Menu.Item key="cooperation">合作</Menu.Item>
+              <Menu.Item key="about">关于</Menu.Item>
+              <Menu.Item key="zh">中</Menu.Item>
+              <span>|</span>
+              <Menu.Item key="en">英</Menu.Item>
+            </Menu>
           </div>
         </div>
       </header>

@@ -1,0 +1,47 @@
+.container {
+    margin-top: 100px;
+}
+
+.index-title {
+    display: flex;
+    align-items: center;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 29px;
+    box-sizing: border-box;
+}
+
+h3 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    flex: 1;
+    font-size: 24px;
+    color: #5f6368;
+    vertical-align: middle;
+}
+
+.col-news {
+    display: block;
+    margin-bottom: 100px;
+}
+
+.col-news .ant-carousel .slick-slide {
+    text-align: center;
+    background: #364d79;
+    line-height: 450px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.col-news .ant-carousel .slick-slide h3 {
+    color: #fff;
+}
