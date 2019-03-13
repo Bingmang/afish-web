@@ -26,12 +26,15 @@ h3 {
     flex: 1;
     font-size: 24px;
     color: #5f6368;
-    vertical-align: middle;
 }
 
 .col-news {
     display: block;
     margin-bottom: 100px;
+}
+
+.col-news .ant-carousel {
+    margin-bottom: 80px;
 }
 
 .col-news .ant-carousel .slick-slide {
