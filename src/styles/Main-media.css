@@ -1,0 +1,9 @@
+@media (max-width: 1024px) {
+  #bannerTitle {
+    top: 25%;
+    font-size: 40px;
+  }
+  #navbar {
+    justify-content: center;
+  }
+}

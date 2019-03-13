@@ -1,28 +1,52 @@
 import React from 'react'
-import { Layout, Menu } from 'antd'
+
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import SearchIcon from '@material-ui/icons/Search';
+import { Button, Typography } from '@material-ui/core';
 
 import logo from '../sources/logo.png'
 
-import '../styles/Header.css'
+const sections = [
+  '论文',
+  '新闻',
+  '成果',
+  '合作',
+  '关于',
+]
 
-const Header = () => (
-  <Layout.Header>
-    <div className="navbar">
-      <Menu
-        mode="horizontal"
-        style={{ lineHeight: '64px' }}
-      >
-        <Menu.Item key="paper">论文</Menu.Item>
-        <Menu.Item key="news">新闻</Menu.Item>
-        <Menu.Item key="achieve">成果</Menu.Item>
-        <Menu.Item key="cooperation">合作</Menu.Item>
-        <Menu.Item key="about">关于</Menu.Item>
-        <Menu.Item key="zh">中</Menu.Item>
-        <Menu.Item key="slice" disabled><span>|</span></Menu.Item>
-        <Menu.Item key="en">En</Menu.Item>
-      </Menu>
-    </div>
-  </Layout.Header>
-)
+export default (props) => {
+  const { classes } = props
 
-export default Header
+  return (
+    <React.Fragment>
+      <Toolbar className={classes.toolbarMain}>
+        <a href="/"><img src={logo} alt="logo" /></a>
+        <Typography
+          component="h2"
+          variant="h5"
+          color="inherit"
+          align="center"
+          noWrap
+          className={classes.toolbarTitle}
+        >
+          aFish.ai
+        </Typography>
+        <IconButton>
+          <SearchIcon />
+        </IconButton>
+        <Button variant="outlined" size="small">
+          Login
+        </Button>
+      </Toolbar>
+      <Toolbar id = "navbar" variant="dense" className={classes.toolbarSecondary}>
+        {sections.map(section => (
+          <Button className={classes.navButton} key={section}>
+            {section}
+          </Button>
+        ))}
+      </Toolbar>
+    </React.Fragment>
+  )
+
+}

@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Route} from 'react-router-dom'
-import App from './components/App'
+import Main from './components/Main'
 
 export default (
   <BrowserRouter>
-    <Route path='/' component={App}></Route>
+    <Route path='/' component={Main}></Route>
   </BrowserRouter>
 )
